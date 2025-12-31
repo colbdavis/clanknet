@@ -2,6 +2,8 @@
 
 A comprehensive Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine, Open Notebook, and system monitoring.
 
+# IMPORTANT: Open Notebook and cAdvisor currently don't work
+
 ## 🚀 Features
 
 - **Ollama**: Local LLM inference server
