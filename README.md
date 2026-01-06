@@ -9,8 +9,6 @@ A comprehensive Docker Compose setup for running a complete local AI ecosystem w
 - **Ollama**: Local LLM inference server
 - **Open WebUI**: Modern chat interface for interacting with AI models
 - **SearXNG**: Privacy-respecting metasearch engine for web searches
-- **Open Notebook**: AI-powered notebook for research and documentation
-- **cAdvisor**: Container monitoring and performance analysis
 
 All services are interconnected on a private Docker network for seamless communication.
 
@@ -51,8 +49,6 @@ docker-compose up -d
 | Open WebUI | http://localhost:8080 | Main chat interface |
 | SearXNG | http://localhost:8081 | Search engine |
 | Ollama API | http://localhost:11434 | LLM API endpoint |
-| Open Notebook | http://localhost:8502 | Research notebook |
-| cAdvisor | http://localhost:8088 | Container monitoring |
 
 ## 🔧 Configuration
 
@@ -62,7 +58,6 @@ Default resource allocations:
 - **Ollama**: 2GB RAM, 4 CPUs
 - **Open WebUI**: 1GB RAM, 2 CPUs
 - **SearXNG**: 500MB RAM, 1 CPU
-- **Open Notebook**: 1.5GB RAM, 2 CPUs
 
 Adjust these in `docker-compose.yml` based on your system resources.
 
@@ -101,17 +96,6 @@ Open WebUI automatically connects to Ollama via `http://ollama:11434`
 
 ### Open WebUI ↔ SearXNG
 Web search functionality is enabled through `http://searxng:8081`
-
-### Open Notebook ↔ Ollama
-Open Notebook connects to Ollama for AI-powered features
-
-## 📊 Monitoring
-
-Access cAdvisor at http://localhost:8088 to monitor:
-- CPU and memory usage per container
-- Network I/O statistics
-- Filesystem usage
-- Container performance metrics
 
 ## 🔒 Security Notes
 
@@ -163,8 +147,6 @@ All data is persisted in `~/docker/`:
 - `~/docker/ollama`: Model files and cache
 - `~/docker/openwebui`: Chat history and settings
 - `~/docker/searxng`: Search engine configuration
-- `~/docker/opennotebook/data`: Notebook data
-- `~/docker/opennotebook/surreal`: Database files
 
 ## 🔄 Updates
 
@@ -205,8 +187,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Ollama](https://ollama.ai/) - Local LLM runtime
 - [Open WebUI](https://github.com/open-webui/open-webui) - Chat interface
 - [SearXNG](https://github.com/searxng/searxng) - Privacy-respecting search
-- [Open Notebook](https://github.com/lfnovo/open_notebook) - AI notebook
-- [cAdvisor](https://github.com/google/cadvisor) - Container monitoring
 
 ## 📧 Support
 
