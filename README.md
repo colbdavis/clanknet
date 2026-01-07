@@ -1,13 +1,15 @@
 # Local AI Docker Network
 
-A comprehensive Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine, Open Notebook, and system monitoring.
+A comprehensive Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine and n8n for automation.
 
+# TODO: Implement security monitoring and settings.
 
 ## 🚀 Features
 
 - **Ollama**: Local LLM inference server
 - **Open WebUI**: Modern chat interface for interacting with AI models
 - **SearXNG**: Privacy-respecting metasearch engine for web searches
+- **n8n**: Automation framework
 
 All services are interconnected on a private Docker network for seamless communication.
 
@@ -22,18 +24,22 @@ All services are interconnected on a private Docker network for seamless communi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/local-ai-docker-net.git
+git clone https://github.com/colbdavis/local-ai-docker-net.git
 cd local-ai-docker-net
 ```
 
 2. Create required directories:
 ```bash
-mkdir -p ~/docker/{ollama,openwebui,searxng,opennotebook/data,opennotebook/surreal}
+mkdir -p ~/docker/{ollama,openwebui,searxng,n8n}
 ```
 
 3. Copy the SearXNG configuration:
 ```bash
 cp searxng/settings.yml ~/docker/searxng/settings.yml
+```
+4. Chown the n8n directory to the container node (explained badly I know)
+```bash
+sudo chown -R 1000:1000 ${HOME}/docker/n8n
 ```
 
 4. Start the services:
@@ -48,6 +54,8 @@ docker-compose up -d
 | Open WebUI | http://localhost:8080 | Main chat interface |
 | SearXNG | http://localhost:8081 | Search engine |
 | Ollama API | http://localhost:11434 | LLM API endpoint |
+| n8n | http://localhost:5678 | n8n web UI |
+
 
 ## 🔧 Configuration
 
@@ -57,6 +65,8 @@ Default resource allocations:
 - **Ollama**: 2GB RAM, 4 CPUs
 - **Open WebUI**: 1GB RAM, 2 CPUs
 - **SearXNG**: 500MB RAM, 1 CPU
+- **n8n**: 1GB RAM, 2 CPUs
+
 
 Adjust these in `docker-compose.yml` based on your system resources.
 
@@ -95,6 +105,8 @@ Open WebUI automatically connects to Ollama via `http://ollama:11434`
 
 ### Open WebUI ↔ SearXNG
 Web search functionality is enabled through `http://searxng:8081`
+
+### And everything you want...
 
 ## 🔒 Security Notes
 
