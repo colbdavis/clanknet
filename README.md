@@ -2,8 +2,6 @@
 
 A comprehensive Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine and n8n for automation.
 
-# TODO: Implement security monitoring and settings.
-
 ## 🚀 Features
 
 - **Ollama**: Local LLM inference server
@@ -198,6 +196,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Ollama](https://ollama.ai/) - Local LLM runtime
 - [Open WebUI](https://github.com/open-webui/open-webui) - Chat interface
 - [SearXNG](https://github.com/searxng/searxng) - Privacy-respecting search
+- [n8n](https://github.com/n8n-io/n8n) - Automation platform
+- [Ai Hub Searxng Docker](https://github.com/spacecodee/ai-hub-searxng-docker) - One of the most similar projects, which I take inspiration from
 
 ## 📧 Support
 
