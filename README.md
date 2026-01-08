@@ -1,8 +1,8 @@
-# Local AI Docker Network
+# Clank Net, build your net of clankers: A Local AI Docker Network
 
 A comprehensive Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine and n8n for automation.
 
-## 🚀 Features
+## 🚚 Containers
 
 - **Ollama**: Local LLM inference server
 - **Open WebUI**: Modern chat interface for interacting with AI models
@@ -35,10 +35,7 @@ mkdir -p ~/docker/{ollama,openwebui,searxng,n8n}
 ```bash
 cp searxng/settings.yml ~/docker/searxng/settings.yml
 ```
-4. Chown the n8n directory to the container node (explained badly I know)
-```bash
-sudo chown -R 1000:1000 ${HOME}/docker/n8n
-```
+
 
 4. Start the services:
 ```bash
@@ -149,7 +146,11 @@ docker stats
 # Adjust limits in docker-compose.yml
 mem_limit: 1g  # Reduce as needed
 ```
-
+### n8n restarting for priviledge conflict
+Chown the n8n directory to the container
+```bash
+sudo chown -R 1000:1000 ${HOME}/docker/n8n
+```
 ## 📁 Data Persistence
 
 All data is persisted in `~/docker/`:
