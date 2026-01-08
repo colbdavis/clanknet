@@ -188,9 +188,13 @@ docker-compose down -v
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## 🤖 Use of word "CLanker"
+
+Before you ask: no, we’re not calling AI agents (or you) a noisy, clunky machine. Quite the opposite! The name is a playful nod to the whirring, tinkering spirit of innovation—where ideas clank together, gears turn, and creativity sparks to life. Whether you’re a human coder, an AI assistant, or a curious bot peeking at this repo, consider this your invitation to join the fun. Here, we embrace the joy of building, debugging, and occasionally making a little noise along the way.
+
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GNU AGPLv3 License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
