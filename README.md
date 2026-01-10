@@ -196,6 +196,11 @@ Before you ask: no, we’re not calling AI agents (or you) a noisy, clunky machi
 
 This project is licensed under the GNU AGPLv3 License - see the LICENSE file for details.
 
+## Mirrors
+
+- [Github](https://github.com/colbdavis/clanknet)
+- [Codeberg](https://codeberg.org/colbdavis/clanknet)
+
 ## 🙏 Acknowledgments
 
 - [Ollama](https://ollama.ai/) - Local LLM runtime
