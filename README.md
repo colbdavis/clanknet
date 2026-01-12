@@ -1,6 +1,6 @@
 # Clank Net, build your net of clankers: A Local AI Docker Network
 
-A comprehensive Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine and n8n for automation.
+A Docker Compose setup for running a complete local AI ecosystem with Ollama, Open WebUI, SearXNG search engine and n8n for automation.
 
 ## 🚚 Containers
 
@@ -11,14 +11,11 @@ A comprehensive Docker Compose setup for running a complete local AI ecosystem w
 
 All services are interconnected on a private Docker network for seamless communication.
 
-## 📋 Prerequisites
+## Prerequisites
 
-- Docker Engine 20.10 or higher
-- Docker Compose V2
-- At least 8GB RAM (16GB recommended)
-- 20GB free disk space for models and data
+- At least 5GB RAM (8GB recommended)
 
-## 🛠️ Installation
+## Installation
 
 1. Clone the repository:
 ```bash
@@ -93,7 +90,7 @@ docker exec -it ollama ollama pull codellama
 docker exec -it ollama ollama pull llava
 ```
 
-## 🔗 Service Integration
+## Service Integration
 
 ### Open WebUI ↔ Ollama
 Open WebUI automatically connects to Ollama via `http://ollama:11434`
@@ -103,7 +100,7 @@ Web search functionality is enabled through `http://searxng:8081`
 
 ### And everything you want...
 
-## 🔒 Security Notes
+## Security Notes
 
 - All services run on localhost by default
 - SearXNG is configured for local use only
@@ -116,7 +113,7 @@ Web search functionality is enabled through `http://searxng:8081`
 - Restrict network access
 - Enable API authentication
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Ollama not responding
 ```bash
@@ -151,14 +148,14 @@ Chown the n8n directory to the container
 ```bash
 sudo chown -R 1000:1000 ${HOME}/docker/n8n
 ```
-## 📁 Data Persistence
+## Data Persistence
 
 All data is persisted in `~/docker/`:
 - `~/docker/ollama`: Model files and cache
 - `~/docker/openwebui`: Chat history and settings
 - `~/docker/searxng`: Search engine configuration
 
-## 🔄 Updates
+## Updates
 
 Update all services:
 ```bash
@@ -172,7 +169,7 @@ docker-compose pull ollama
 docker-compose up -d ollama
 ```
 
-## 🛑 Stopping Services
+## Stopping Services
 
 Stop all services:
 ```bash
@@ -184,15 +181,15 @@ Stop and remove volumes (⚠️ deletes all data):
 docker-compose down -v
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 🤖 Use of word "CLanker"
+## Use of word "CLanker"
 
-Before you ask: no, we’re not calling AI agents (or you) a noisy, clunky machine. Quite the opposite! The name is a playful nod to the whirring, tinkering spirit of innovation—where ideas clank together, gears turn, and creativity sparks to life. Whether you’re a human coder, an AI assistant, or a curious bot peeking at this repo, consider this your invitation to join the fun. Here, we embrace the joy of building, debugging, and occasionally making a little noise along the way.
+Hey! The Use of the word Clanker is in a playful way, not in a offensive meaning, especially towards angets that could be reanding this. 
 
-## 📝 License
+## License
 
 This project is licensed under the GNU AGPLv3 License - see the LICENSE file for details.
 
@@ -201,7 +198,7 @@ This project is licensed under the GNU AGPLv3 License - see the LICENSE file for
 - [Github](https://github.com/colbdavis/clanknet)
 - [Codeberg](https://codeberg.org/colbdavis/clanknet)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Ollama](https://ollama.ai/) - Local LLM runtime
 - [Open WebUI](https://github.com/open-webui/open-webui) - Chat interface
